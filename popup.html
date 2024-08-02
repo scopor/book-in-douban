@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>豆瓣图书查询</title>
+  <style>
+    body {
+      width: 500px;
+      min-height: 375px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    #bookInfo {
+      margin-top: 20px;
+    }
+    #bookCover {
+      max-width: 100px;
+      float: left;
+      margin-right: 10px;
+    }
+    #bookDetails {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>豆瓣图书查询</h1>
+  <div id="result"></div>
+  <div id="bookInfo" style="display:none;">
+    <div id="bookDetails">
+      <h2 id="bookTitle"></h2>
+	  <span><a id="bookPath" style="text-decoration: none;" href="" target="_blank">去豆瓣查看</a></span>
+	  <p id="author"></p>
+	  <p id="translator"></p>
+      <p id="bookISBN"></p>
+      <p id="bookRating"></p>
+    </div>
+	<img id="bookCover" src="" alt="书籍封面">
+  </div>
+  <div id="bookSummary"><p></p></div>
+  <script src="popup.js"></script>
+</body>
+</html>
