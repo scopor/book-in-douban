@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "豆瓣图书查询",
+  "version": "1.0",
+  "description": "查询豆瓣读书中的书籍信息",
+  "permissions": [
+    "activeTab",
+    "https://api.douban.com/*",
+	"http://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+	  "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
